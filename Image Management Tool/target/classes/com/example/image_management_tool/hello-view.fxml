@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.image_management_tool.ImageController" style="-fx-background-color: #ffffff;">
+  <center>
+    <VBox spacing="20" alignment="CENTER">
+      <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+      </padding>
+      <Button text="Upload An Image" onAction="#uploadImage" minWidth="200" minHeight="70"
+              style="-fx-font-size: 30px; font-weight: bold; font-family: Arial;
+              -fx-background-size: 250, 200; -fx-border-radius: 30%; -fx-padding: 0px; -fx-background-color: #000000; -fx-text-fill: white;
+              cursor: pointer;"/>
+      <HBox spacing="100" alignment="CENTER">
+        <ImageView fx:id="imageView" fitWidth="100" fitHeight="100"/>
+        <VBox spacing="20" alignment="CENTER">
+          <Label fx:id="labelText" style="-fx-text-fill: black;-fx-font-size: 20px; font-family: Arial;"/>
+          <ComboBox fx:id="comboBox" minWidth="250" minHeight="40" style="-fx-font-size: 25px; font-family: Arial;">
+            <opaqueInsets>
+              <Insets/>
+            </opaqueInsets>
+          </ComboBox>
+          <Button text="Convert image" onAction="#convertImage" minWidth="250" minHeight="70"
+                  style="-fx-font-size: 30px; font-weight: bold; font-family: Arial;"/>
+          <Button text="Save image" onAction="#saveImage" minWidth="250" minHeight="70"
+                  style="-fx-font-size: 30px; font-weight: bold; font-family: Arial;"/>
+        </VBox>
+      </HBox>
+    </VBox>
+  </center>
+</BorderPane>
